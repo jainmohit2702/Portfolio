@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { styled } from "@mui/system";
 import Particle from "./Particle"; // Assuming you have a Particle component
@@ -46,7 +45,9 @@ const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
   height: 140,
   backgroundSize: "contain",
   marginTop: theme.spacing(2),
+  boxShadow: "0 4px 10px rgba(255, 255, 255, 0.6)", // Adding white shadow to the image
 }));
+
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: "white",
@@ -57,23 +58,25 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 }));
 
 function Extras() {
-  // Array of Project Data
+  // Array of Project Data with unique images for each project
   const projectData = [
     {
       title: "AWS Cloud Practitioner",
       description: "AWS Certified",
       ghLink: "https://cp.certmetrics.com/amazon/en/public/verify/credential/8e1c281c115841e4934834491c670dcb",
+      image: "/aws.png", // Unique image for AWS
     },
     {
-      title: "Tableau ",
-      description:"Tableau Certified",
-        ghLink: "https://www.credly.com/badges/a36ffe61-75b0-46e4-a07f-19e29aaea2ac/linked_in_profile",
+      title: "Tableau",
+      description: "Tableau Certified",
+      ghLink: "https://www.credly.com/badges/a36ffe61-75b0-46e4-a07f-19e29aaea2ac/linked_in_profile",
+      image: "/tableau.png", // Unique image for Tableau
     },
     {
       title: "Coursera",
-      description:
-       "Coursera Certified",
+      description: "Coursera Certified",
       ghLink: "https://coursera.org/share/9e7112b0a08f8319fadabeefffada9e7",
+      image: "/coursera.png", // Unique image for Coursera
     },
   ];
 
@@ -92,7 +95,7 @@ function Extras() {
             <StyledCard>
               <div>
                 <StyledCardMedia
-                  image="/certify.png" // Updated image path
+                  image={project.image} // Dynamic image for each project
                   title={project.title}
                 />
                 <CardContent>
@@ -118,14 +121,6 @@ function Extras() {
                 >
                   <WorkspacePremiumIcon />
                 </StyledIconButton>
-                {/* <StyledIconButton
-                  aria-label="GitHub"
-                  href={project.ghLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon />
-                </StyledIconButton> */}
               </CardActions>
             </StyledCard>
           </Grid>

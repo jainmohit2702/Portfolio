@@ -1,63 +1,100 @@
-/* Nav.css */
+/* Navbar container styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Kept original navbar height */
+  background-color: #cee8ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 999;
+}
 
-/* Give each nav link a relative position and overflow hidden */
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+}
+
+.logoIcon {
+  font-size: 24px; /* Kept original logo icon size */
+  margin-right: 4px;
+  transition: transform 0.3s ease; /* Add animation on hover */
+}
+
+.logoIcon:hover {
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Navigation button styles */
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Keep alignment consistent */
+}
+
 .navLink {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    color: #1F3A5F; 
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 4px;
-    overflow: hidden; /* So the ripple doesn't spill outside */
-    transition: background-color 0.2s ease;
-  }
-  
-  /* On hover, maybe change background slightly */
-  .navLink:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* The pseudo-element that becomes our ripple */
-  .navLink::after {
-    content: "";
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.8s ease;
-  }
-  
-  /* When the link is clicked (active), the ripple expands */
-  .navLink:active::after {
-    transform: translate(-50%, -50%) scale(12);
-    opacity: 1;
-  }
-  
-  .downloadButton {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #4d648d;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: 500;
-  }
-  
-  .downloadButton:hover {
-    background-color: #4d648d;
-    color: #f2f3f4;
-    transform: scale(1.05);
-  }
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Increased font size for buttons */
+  color: #1f3a5f; /* Default color */
+  text-decoration: none;
+  padding: 12px 20px; /* Increased button padding */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  opacity: 0.8; /* Default opacity */
+}
 
-  .downloadButtonContainer {
-    margin-right: auto;
-  }
-  
+.navLink:hover {
+  opacity: 1; /* Full opacity on hover */
+  background-color: white; /* Change background to white on hover */
+  color: #1f3a5f; /* Change text color back to original */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Navigation icons size */
+.navIcon {
+  font-size: 22px; /* Increased icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Download Resume Button */
+/* Download Resume Button */
+/* Download Resume Button Container */
+.downloadButtonContainer {
+  margin-left: auto; /* Positioned it within navbar and stays on the right */
+  margin-right: 40px; /* Padding between button and right edge */
+}
+
+/* Download Button */
+.downloadButton {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: #4d89ff;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+  opacity: 1;
+  background-color: #3b75cc;
+  transform: scale(1.05);
+}
+
+.downloadIcon {
+  margin-right: 10px;
+  font-size: 24px;
+}

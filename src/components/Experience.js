@@ -219,7 +219,7 @@ const experiences = [
     company: "University of Maryland",
     position: "Data Engineer Intern",
     duration: "2024-2024",
-    image: "/company.png", // Ensure this image exists in the public folder
+    image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
       "Engineered an ETL pipeline integrating GIS data and GCP Places API to extract, transform, and analyze MySQL databases, generating JSON outputs for web dashboards and increasing data throughput by 30%.",
       "Restructured REST APIs with AWS Lambda and API Gateway, adopting a serverless architecture to reduce server costs, optimize API calls, and improve cloud infrastructure, saving $1K per quarter.",
@@ -231,7 +231,7 @@ const experiences = [
           company: "University of Maryland",
           position: "Data Analyst - GA",
           duration: "Aug 2023 - May 2024",
-          image: "/company.png", // Ensure this image exists in the public folder
+          image: "/UMD.webp", // Ensure this image exists in the public folder
           tags: ["Data Science"],
           responsibilities: [
             "Implemented data transformation techniques using Excel (VLOOKUP, VBA, Macros, Pivot Tables), reducing manual workload by 45% and boosting data accuracy by 30%",
@@ -244,7 +244,7 @@ const experiences = [
           company: " Tata Consultancy Services",
           position: "Data Analyst ",
           duration: " May 2021 − Jul 2023",
-          image: "/company.png", // Ensure this image exists in the public folder
+          image: "/tcs.svg", // Ensure this image exists in the public folder
           tags: ["Full Stack"],
           responsibilities: [
             " Built Power BI dashboards for stakeholders across cross-functional teams, integrating KPIs (Key Performance Indicators), driving data storytelling, reducing ad-hoc reporting requests, and saving 16 man-hours per month.",
@@ -257,7 +257,7 @@ const experiences = [
           company: "Strategic Solutions International",
           position: "Business Intelligence Intern",
           duration: "Jan 2018 - Feb 2019",
-          image: "/company.png", // Ensure this image exists in the public folder
+          image: "/SSG.png", // Ensure this image exists in the public folder
           tags: ["Data Science"],
           responsibilities: [
             "Coordinated strategic business and requirements gathering for 30+ government contracts, conducting requirement analysis and executing risk analysis, which led to a 15% reduction in project risks.",
@@ -374,42 +374,59 @@ export default function Experience() {
 
       {/* Professional Skillset Section */}
       <Box sx={{ textAlign: "center", mt: 8 }}>
-        <Typography
-          variant="h4"
-          sx={{
-            color: "#cee8ff",
-            fontWeight: "bold",
-            mb: 4,
-          }}
-        >
-          My Professional Skillset
-        </Typography>
-        <Grid container spacing={4} justifyContent="center">
-          {/* Skill Icons */}
-          {[
-            { name: "Python", color: "#3776AB", className: "fab fa-python" },
-            { name: "PostgreSQL", color: "#336791", className: "fas fa-database" },
-            { name: "Power BI", color: "#F2C811", className: "fas fa-chart-bar" },
-            { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
-            { name: "Git", color: "#F05032", className: "fab fa-git" },
-            { name: "Confluence", color: "#172B4D", className: "fas fa-project-diagram" },
-            { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
-            { name: "Azure", color: "#0078D4", className: "fab fa-microsoft" },
-            { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
-            { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },
-          ].map((skill, index) => (
-            <Grid item xs={6} sm={4} md={2} key={index}>
-              <i
-                className={skill.className}
-                style={{ fontSize: "48px", color: skill.color }}
-              ></i>
-              <Typography variant="subtitle1" sx={{ mt: 1, color: "#acc2ef" }}>
-                {skill.name}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      <Typography
+        variant="h4"
+        sx={{
+          color: "#cee8ff",
+          fontWeight: "bold",
+          mb: 4,
+        }}
+      >
+        My Professional Skillset
+      </Typography>
+      <Grid container spacing={4} justifyContent="center">
+        {/* Skill Icons */}
+        {[
+          { name: "Python", color: "#3776AB", className: "fab fa-python" },
+          { name: "PostgreSQL", color: "#336791", className: "fas fa-database" },
+          { name: "Power BI", color: "#F2C811", className: "fas fa-chart-bar" },
+          { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
+          { name: "Git", color: "#F05032", className: "fab fa-git" },
+          { name: "Confluence", color: "#172B4D", className: "fas fa-project-diagram" },
+          { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
+          { name: "Azure", color: "#0078D4", className: "fab fa-microsoft" },
+          { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
+          { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },
+        ].map((skill, index) => (
+          <Grid item xs={6} sm={4} md={2} key={index}>
+            {/* Icon with glowing border */}
+            <i
+              className={skill.className}
+              style={{
+                fontSize: "48px",
+                color: skill.color,
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                padding: "10px", // Adds space between icon and border
+                borderRadius: "10px", // Rounded corners for the square
+                border: `3px solid #cee8ff`, // Glowing border color
+                boxShadow: "0 0 15px rgba(206, 232, 255, 0.7)", // Glowing effect
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "scale(1.1)";
+                e.target.style.boxShadow = "0 0 20px rgba(206, 232, 255, 1)"; // Increase glow on hover
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "scale(1)";
+                e.target.style.boxShadow = "0 0 15px rgba(206, 232, 255, 0.7)"; // Reset glow
+              }}
+            ></i>
+            <Typography variant="subtitle1" sx={{ mt: 1, color: "#acc2ef" }}>
+              {skill.name}
+            </Typography>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
     </Container>
   );
 }
