@@ -45,9 +45,8 @@ const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
   height: 140,
   backgroundSize: "contain",
   marginTop: theme.spacing(2),
-  boxShadow: "0 4px 10px rgba(255, 255, 255, 0.6)", // Adding white shadow to the image
+  boxShadow: "0 4px 10px rgba(255, 255, 255, 0.6)",
 }));
-
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: "white",

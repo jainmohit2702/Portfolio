@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Box ,Typography} from "@mui/material";
 import "./App.css";
+import "font-awesome/css/font-awesome.min.css";
 
 // Components
 import Nav from "./components/NavBar";
