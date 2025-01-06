@@ -242,26 +242,20 @@ function About() {
           </Typography>
 
           <Typography variant="body1" sx={{ fontSize: "1.15rem", lineHeight: 1.6 }}>
-            Hi, I’m Anuj Sharma, a data and machine learning professional
-            passionate about turning raw data into impactful insights.
+            Hi, I’m Mohit Jain, as a Data Analyst with 3+ years of experience and a Master's in Information Systems from the University of Maryland, I specialize in transforming complex data into actionable insights.
             <br />
             <br />
             With expertise in
             <span style={{ color: "#cee8ff", fontStyle: "italic", fontWeight: "bold" }}>
           {" "}
-       Python, SQL, Power BI, and machine learning.
+          Python, SQL, Tableau, and AWS.
   </span>
             <br />
             <br />
-            I deliver solutions that drive decision-making and optimize
-            processes. From predictive modeling to designing dashboards that
-            tell compelling stories, I excel at crafting data-driven strategies
-            to solve real-world challenges. Explore my portfolio to see how I
-            blend advanced analytics with business intelligence to create
-            measurable impact.
+            I build interactive dashboards, optimize data processes, and conduct predictive analyses to drive strategic decisions. I’m passionate about solving real-world challenges through data and eager to contribute to innovative organizations.
             <br />
             <br />
-            <b className="purple">Let’s unlock the potential of data together!</b>
+            {/* <b className="purple">Let’s unlock the potential of data together!</b> */}
           </Typography>
 
           {/* Social Links */}
@@ -281,7 +275,7 @@ function About() {
             >
               {/* GitHub */}
               <Link
-                href="https://github.com/soumyajit4419"
+                href="https://github.com/jainmohit2702"
                 target="_blank"
                 rel="noreferrer"
                 sx={{ color: "white", transition: "color 0.3s", "&:hover": { color: "#cee8ff" } }}
@@ -290,7 +284,7 @@ function About() {
               </Link>
               {/* LinkedIn */}
               <Link
-                href="https://www.linkedin.com/in/sharmaanuj10/"
+                href="https://www.linkedin.com/in/mohit-2702-jain?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noreferrer"
                 sx={{ color: "white", transition: "color 0.3s", "&:hover": { color: "#cee8ff" } }}
@@ -304,17 +298,34 @@ function About() {
 
         {/* Right side: avatar.svg */}
         <Box
-          sx={{
-            maxWidth: "400px",
-            flex: 1,
-            display: "flex",
-            justifyContent: "center", // Center the image horizontally within the box
+      sx={{
+        maxWidth: "300px", // Reduced maxWidth from 400px to 200px
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center", // Vertically center the image
+        margin: "auto", // Center the Box within its parent
+      }}
+    >
+      <Tilt
+        options={{
+          max: 25, // Adjust the tilt intensity
+          scale: 1.05, // Slightly scale the image on hover
+          speed: 400, // Tilt speed
+        }}
+        style={{ width: '100%', height: '100%' }} // Ensure Tilt doesn't exceed Box's size
+      >
+        <img
+          src="/Photo.png"
+          alt="avatar"
+          style={{
+            width: '100%', // Make the image take the full width of the Box
+            height: 'auto', // Maintain aspect ratio
+            borderRadius: '8px', // Optional: rounded corners
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional: subtle shadow
           }}
-        >
-          <Tilt>
-            <img src="/avatar.svg" className="img-fluid" alt="avatar" />
-          </Tilt>
-        </Box>
+        />
+      </Tilt>
+    </Box>
       </Box>
     </React.Fragment>
   );

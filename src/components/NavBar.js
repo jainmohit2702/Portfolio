@@ -1,8 +1,14 @@
+// src/components/Nav.js
 import React from "react";
 import { Link } from "react-router-dom";
 import ProfileArray from "./ProfileArray";
 import { TbDownload } from "react-icons/tb";
-import "./Nav.css"; // import the CSS file you created
+
+// Importing additional icons for navigation buttons
+import { AiOutlineInfo } from "react-icons/ai"; // About
+import { FaBriefcase, FaFolderOpen, FaStar } from "react-icons/fa"; // Experience, Projects, Extras
+import "./Nav.css"; // Import the CSS file
+
 const TbIcons = require("react-icons/tb");
 
 function Nav() {
@@ -27,6 +33,8 @@ function Nav() {
           ))}
         </Link>
       </div>
+
+      {/* Download Resume Button */}
       <div className="downloadButtonContainer">
         <a href="/resume.pdf" download className="downloadButton" aria-label="Download Resume">
           <TbDownload className="downloadIcon" />
@@ -37,16 +45,20 @@ function Nav() {
       {/* Navigation Links */}
       <div style={styles.links}>
         <Link to="/" className="navLink">
+          <AiOutlineInfo className="navIcon" />
           About
         </Link>
         <Link to="/experience" className="navLink">
+          <FaBriefcase className="navIcon" />
           Experience
         </Link>
         <Link to="/projects" className="navLink">
+          <FaFolderOpen className="navIcon" />
           Projects
         </Link>
         <Link to="/extras" className="navLink">
-          Extras
+          <FaStar className="navIcon" />
+          Certifications
         </Link>
       </div>
     </nav>
@@ -82,9 +94,8 @@ const styles = {
   links: {
     display: "flex",
     gap: "20px",
-    marginRight: "80px", // ← shift the links container left
+    marginRight: "80px", // Shift the links container left
   },
 };
-
 
 export default Nav;

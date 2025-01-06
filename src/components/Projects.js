@@ -59,35 +59,34 @@ function Projects() {
   // Array of Project Data
   const projectData = [
     {
-      title: "Stroke Prediction Model",
+      title: "Predictive-Analysis-of-Stock-Market-Data",
       description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/Stroke_Prediction_Model",
+        "This repository contains an in-depth analysis of Tata Consultancy Services (TCS) stock market data over a period of 10 years, from 2013 to 2024. The objective of this analysis is to extract key performance metrics, understand stock price trends, and build predictive models for generating trading signals. This project utilizes various data analysis techniques and machine learning models to provide insights and potential trading strategies.",
+      ghLink: "https://github.com/jainmohit2702/Predictive-Analysis-of-Stock-Market-Data",
     },
     {
-      title: "Customer Retention and Churn in the Airline Industry",
+      title: "Credit-Risk-Assessment-and-Predictive-Analysis-for-Mortgage-Lending-Optimization",
       description:
-        "This project predicts customer churn in the airline industry using machine learning models like Random Forest and Gradient Boosting. By analyzing key factors such as travel type and loyalty points, it provides actionable insights to help airlines improve retention strategies and enhance customer satisfaction.",
-      ghLink: "https://github.com/anujsharma1506/Customer-Retention-and-Churn-in-the-Airline-Industry",
+        "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation, achieving an 83% accuracy in detecting potential loan defaults.",
+      ghLink: "https://github.com/jainmohit2702/Credit-Risk-Assessment-and-Predictive-Analysis-for-Mortgage-Lending-Optimization-",
     },
     {
-      title: "People Analytics: Understanding Employee Performance and Retention",
-      description:
-        "This project uses people analytics to analyze employee performance, retention, and demographics, providing actionable insights to enhance workforce satisfaction, retention strategies, and organizational decision-making.",
-      ghLink: "https://github.com/anujsharma1506/People-Analytics-Understanding-Employee-Performance-and-Retention",
+      title: "Tableau Projects",
+      description:"CO2 Emissions: Explore emissions by country, region, and income.British Airways Reviews: Analyze customer feedback and satisfaction insights.",
+       ghLink: "https://public.tableau.com/app/profile/mohit.jain3059/vizzes",
     },
-    {
-      title: "Fraud Detection and Prevention in Credit Card Transactions",
-      description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/Fraud-Detection-and-Prevention-in-Credit-Card-Transactions",
-    },
-    {
-      title: "Traffic Violation Analysis on Montgomery County",
-      description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/-Traffic-Violation-Analysis-on-Montgomery-County",
-    },
+    // {
+    //   title: "Fraud Detection and Prevention in Credit Card Transactions",
+    //   description:
+    //     "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
+    //   ghLink: "https://github.com/anujsharma1506/Fraud-Detection-and-Prevention-in-Credit-Card-Transactions",
+    // },
+    // {
+    //   title: "Traffic Violation Analysis on Montgomery County",
+    //   description:
+    //     "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
+    //   ghLink: "https://github.com/anujsharma1506/-Traffic-Violation-Analysis-on-Montgomery-County",
+    // },
   ];
 
   return (

@@ -1,108 +1,7 @@
-// import React from "react";
-// import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-// import { Box, Stack, Container, Typography, Divider } from "@mui/material";
-// import ProfileArray from "./ProfileArray";
-
-// export default function Contact({ color }) {
-//   const profile = ProfileArray();
-
-//   const linkedin = () => {
-//     window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
-//   };
-//   const github = () => {
-//     window.open(`${profile.github}`, "_blank", "noreferrer,noopener");
-//   };
-//   const email = () => {
-//     window.open(`mailto:${profile.email}`, "_blank", "noreferrer,noopener");
-//   };
-
-//   return (
-//     <Container maxWidth="md" sx={{ pt: 4 }} id="contact">
-//       {/* Title Section */}
-//       <Box
-//         sx={{
-//           textAlign: "center",
-//           mb: { xs: 5, md: 9 }, // similar to pb in Chakra
-//         }}
-//       >
-//         {/* Title + Divider */}
-//         <Stack
-//           direction="row"
-//           alignItems="center"
-//           justifyContent="center"
-//           spacing={2}
-//           sx={{ mb: 4 }}
-//         >
-//           <Stack direction="row" spacing={1}>
-//             <Typography
-//               variant="h6"
-//               sx={{ color: `${color}.400`, fontWeight: 800 }}
-//             >
-//               04
-//             </Typography>
-//             <Typography variant="h6" sx={{ fontWeight: 800 }}>
-//               Contact
-//             </Typography>
-//           </Stack>
-
-//           <Divider
-//             flexItem
-//             sx={{
-//               borderColor: "rgba(0, 0, 0, 0.12)", // default MUI divider color
-//             }}
-//           />
-//         </Stack>
-
-//         {/* Subtitle / Heading */}
-//         <Typography
-//           variant="h4"
-//           sx={{ mb: 2, fontWeight: "bold" }}
-//         >
-//           Let&apos;s stay in touch!
-//         </Typography>
-
-//         {/* Text content */}
-//         <Typography
-//           variant="body1"
-//           sx={{ color: "gray.600", fontSize: "1.125rem", mb: 1 }}
-//         >
-//           {profile.contact}
-//         </Typography>
-
-//         <Typography
-//           variant="body1"
-//           sx={{
-//             color: `${color}.500`,
-//             fontWeight: 600,
-//             fontSize: "1.125rem",
-//             mb: 2,
-//           }}
-//         >
-//           {profile.email}
-//         </Typography>
-
-//         {/* Icon Links */}
-//         <Box
-//           sx={{
-//             display: "flex",
-//             gap: 2,
-//             justifyContent: "center",
-//             mt: 2,
-//           }}
-//         >
-//           <FaLinkedin onClick={linkedin} size={28} color="white" />
-//           <FaGithub onClick={github} size={28} color="white" />
-//           <FaEnvelope onClick={email} size={28} color="white" />
-//         </Box>
-//       </Box>
-//     </Container>
-//   );
-// }
-
-// Projects.js
 import React from "react";
 import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { styled } from "@mui/system";
 import Particle from "./Particle"; // Assuming you have a Particle component
 
@@ -128,12 +27,12 @@ const ProjectDescription = styled(Typography)(({ theme }) => ({
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  maxWidth: 345,
+  maxWidth: 300, // Reduced card size
   margin: "auto",
   backgroundColor: "transparent",
   boxShadow: "0 4px 5px 3px rgba(119, 53, 136, 0.459)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
-  height: '100%', // Ensures uniform height across cards
+  height: '100%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
@@ -154,40 +53,27 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
   "&:hover": {
     color: "#6c63ff",
   },
+  fontSize: "20px", // Reduced icon size
 }));
 
 function Extras() {
   // Array of Project Data
   const projectData = [
     {
-      title: "Stroke Prediction Model",
-      description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/Stroke_Prediction_Model",
+      title: "AWS Cloud Practitioner",
+      description: "AWS Certified",
+      ghLink: "https://cp.certmetrics.com/amazon/en/public/verify/credential/8e1c281c115841e4934834491c670dcb",
     },
     {
-      title: "Customer Retention and Churn in the Airline Industry",
-      description:
-        "This project predicts customer churn in the airline industry using machine learning models like Random Forest and Gradient Boosting. By analyzing key factors such as travel type and loyalty points, it provides actionable insights to help airlines improve retention strategies and enhance customer satisfaction.",
-      ghLink: "https://github.com/anujsharma1506/Customer-Retention-and-Churn-in-the-Airline-Industry",
+      title: "Tableau ",
+      description:"Tableau Certified",
+        ghLink: "https://www.credly.com/badges/a36ffe61-75b0-46e4-a07f-19e29aaea2ac/linked_in_profile",
     },
     {
-      title: "People Analytics: Understanding Employee Performance and Retention",
+      title: "Coursera",
       description:
-        "This project uses people analytics to analyze employee performance, retention, and demographics, providing actionable insights to enhance workforce satisfaction, retention strategies, and organizational decision-making.",
-      ghLink: "https://github.com/anujsharma1506/People-Analytics-Understanding-Employee-Performance-and-Retention",
-    },
-    {
-      title: "Fraud Detection and Prevention in Credit Card Transactions",
-      description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/Fraud-Detection-and-Prevention-in-Credit-Card-Transactions",
-    },
-    {
-      title: "Traffic Violation Analysis on Montgomery County",
-      description:
-        "A predictive machine learning model designed to estimate an individual's likelihood of experiencing a stroke based on their health and demographic data.",
-      ghLink: "https://github.com/anujsharma1506/-Traffic-Violation-Analysis-on-Montgomery-County",
+       "Coursera Certified",
+      ghLink: "https://coursera.org/share/9e7112b0a08f8319fadabeefffada9e7",
     },
   ];
 
@@ -195,18 +81,18 @@ function Extras() {
     <ProjectSection maxWidth="lg">
       <Particle />
       <ProjectHeading variant="h3">
-        My Recent <strong style={{ color: "#6c63ff" }}>Works</strong>
+        My Certifications <strong style={{ color: "#6c63ff" }}>Works</strong>
       </ProjectHeading>
-      <ProjectDescription variant="subtitle1">
+      {/* <ProjectDescription variant="subtitle1">
         Here are a few projects I've worked on recently.
-      </ProjectDescription>
+      </ProjectDescription> */}
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
-        {projectData.map((project, index) => (
+        {projectData.slice(0, 3).map((project, index) => ( // Limit to 3 cards
           <Grid item key={index} xs={12} sm={6} md={4}>
             <StyledCard>
               <div>
                 <StyledCardMedia
-                  image="/chatify.png" // Updated image path
+                  image="/certify.png" // Updated image path
                   title={project.title}
                 />
                 <CardContent>
@@ -214,7 +100,7 @@ function Extras() {
                     gutterBottom
                     variant="h5"
                     component="div"
-                    sx={{ color: '#cee8ff' }} // Title color set to #cee8ff
+                    sx={{ color: "#cee8ff" }} // Title color set to #cee8ff
                   >
                     {project.title}
                   </Typography>
@@ -223,15 +109,23 @@ function Extras() {
                   </Typography>
                 </CardContent>
               </div>
-              <CardActions sx={{ justifyContent: 'center' }}> {/* Center the GitHub icon */}
+              <CardActions sx={{ justifyContent: "center" }}> {/* Center the icons */}
                 <StyledIconButton
+                  aria-label="Certificate"
+                  href={project.ghLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WorkspacePremiumIcon />
+                </StyledIconButton>
+                {/* <StyledIconButton
                   aria-label="GitHub"
                   href={project.ghLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <GitHubIcon />
-                </StyledIconButton>
+                </StyledIconButton> */}
               </CardActions>
             </StyledCard>
           </Grid>
