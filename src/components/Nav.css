@@ -1,0 +1,63 @@
+/* Nav.css */
+
+/* Give each nav link a relative position and overflow hidden */
+.navLink {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #1F3A5F; 
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    overflow: hidden; /* So the ripple doesn't spill outside */
+    transition: background-color 0.2s ease;
+  }
+  
+  /* On hover, maybe change background slightly */
+  .navLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* The pseudo-element that becomes our ripple */
+  .navLink::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.8s ease;
+  }
+  
+  /* When the link is clicked (active), the ripple expands */
+  .navLink:active::after {
+    transform: translate(-50%, -50%) scale(12);
+    opacity: 1;
+  }
+  
+  .downloadButton {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4d648d;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .downloadButton:hover {
+    background-color: #4d648d;
+    color: #e9ebef;
+    transform: scale(1.05);
+  }
+
+  .downloadButtonContainer {
+    margin-right: auto;
+  }
+  
