@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   font-size: 18px; /* Increased font size for buttons */
-  color: #1f3a5f; /* Default color */
+  color: #09264e; /* Default color */
   text-decoration: none;
   padding: 12px 20px; /* Increased button padding */
   border-radius: 5px;
@@ -82,7 +82,7 @@
   color: white;
   text-decoration: none;
   padding: 12px 20px;
-  background-color: #4d89ff;
+  background-color: #1f5ebc;
   border-radius: 5px;
   opacity: 0.8;
   transition: all 0.3s ease;

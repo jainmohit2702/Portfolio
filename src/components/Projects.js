@@ -143,7 +143,7 @@
 
 
 import React from "react";
-import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material";
+import { Container, Typography, Box, Grid, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { styled } from "@mui/system";
 import { FaProjectDiagram } from "react-icons/fa"; // Importing the React Icon for projects
@@ -151,7 +151,7 @@ import Particle from "./Particle"; // Assuming you have a Particle component
 
 // Styled Components for Customization
 const ProjectSection = styled(Container)(({ theme }) => ({
-  paddingTop: theme.spacing(15),
+  paddingTop: theme.spacing(2), // Reduced top padding to reduce space between the navbar and section
   paddingBottom: theme.spacing(5),
   backgroundColor: "#1F3A5F",
 }));
@@ -174,7 +174,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 345,
   margin: "auto",
   backgroundColor: "transparent",
-  boxShadow: "0 4px 5px 3px rgba(119, 53, 136, 0.459)",
+  boxShadow: "0 4px 5px 3px rgba(145, 197, 249, 0.97)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   height: '100%', // Ensures uniform height across cards
   display: 'flex',
@@ -182,14 +182,14 @@ const StyledCard = styled(Card)(({ theme }) => ({
   justifyContent: 'space-between',
   "&:hover": {
     transform: "scale(1.02)",
-    boxShadow: "0 4px 4px 5px rgba(129, 72, 144, 0.561)",
+    boxShadow: "0 4px 4px 5px rgba(145, 197, 249, 0.97)",
   },
 }));
 
 const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
   height: 140,
   backgroundSize: "contain",
-  marginTop: theme.spacing(2),
+  marginTop: theme.spacing(3),
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -227,7 +227,7 @@ function Projects() {
     <ProjectSection maxWidth="lg">
       <Particle />
       <ProjectHeading variant="h3">
-        My Recent <strong style={{ color: "#6c63ff" }}>Works</strong>
+        My Recent Projects
       </ProjectHeading>
       <ProjectDescription variant="subtitle1">
         Here are a few projects I've worked on recently.
@@ -286,6 +286,61 @@ function Projects() {
           </Grid>
         ))}
       </Grid>
+       {/* Professional Skillset Section */}
+       <Box sx={{ textAlign: "center", mt: 8 }}>
+      <Typography
+        variant="h4"
+        sx={{
+          color: "#cee8ff",
+          fontWeight: "bold",
+          mb: 4,
+        }}
+      >
+        My Professional Skillset
+      </Typography>
+      <Grid container spacing={4} justifyContent="center">
+        {/* Skill Icons */}
+        {[
+          { name: "Python", color: "#3776AB", className: "fab fa-python" },
+          { name: "PostgreSQL", color: "#336791", className: "fas fa-database" },
+          { name: "Power BI", color: "#F2C811", className: "fas fa-chart-bar" },
+          { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
+          { name: "Git", color: "#F05032", className: "fab fa-git" },
+          { name: "Confluence", color: "#172B4D", className: "fas fa-project-diagram" },
+          { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
+          { name: "Azure", color: "#0078D4", className: "fab fa-microsoft" },
+          { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
+          { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },
+        ].map((skill, index) => (
+          <Grid item xs={6} sm={4} md={2} key={index}>
+            {/* Icon with glowing border */}
+            <i
+              className={skill.className}
+              style={{
+                fontSize: "40px",
+                color: skill.color,
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                padding: "30px", // Adds space between icon and border
+                borderRadius: "20px", // Rounded corners for the square
+                border: "0.3px solid  #cee8ff", // Glowing border color
+                boxShadow: "0 0 6px rgba(206, 232, 255, 0.7)", // Glowing effect
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "scale(1.1)";
+                e.target.style.boxShadow = "0 0 20px rgba(206, 232, 255, 1)"; // Increase glow on hover
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "scale(1)";
+                e.target.style.boxShadow = "0 0 15px rgba(206, 232, 255, 0.7)"; // Reset glow
+              }}
+            ></i>
+            <Typography variant="subtitle1" sx={{ mt: 1, color: "#acc2ef" }}>
+              {skill.name}
+            </Typography>
+          </Grid>
+        ))}
+      </Grid>
+      </Box>
     </ProjectSection>
   );
 }

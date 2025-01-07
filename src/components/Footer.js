@@ -48,17 +48,18 @@ const styles = {
     width: "100%",
     height: "60px", // Match the navbar's 60px height
     display: "flex",
-    flexDirection: "column", // Arrange icons and text vertically
-    alignItems: "center", // Centers items horizontally
-    justifyContent: "center",
+    alignItems: "center", // Vertically center the items
     backgroundColor: "#cee8ff",
     color: "#1F3A5F",
     zIndex: 999,
+    paddingLeft: "30px", // Padding for the icons on the left
+    paddingRight: "30px", // Padding for the text on the right
+    justifyContent: "space-between", // Ensures space between icons and text
   },
   iconContainer: {
     display: "flex",
     gap: "15px", // Space between icons
-    marginBottom: "5px", // Space between icons and text
+    justifyContent: "flex-start", // Align icons to the left
   },
   iconLink: {
     textDecoration: "none",
@@ -68,12 +69,13 @@ const styles = {
     color: "#000", // Black color for icons
     transition: "color 0.3s ease", // Smooth hover transition
   },
-  iconHover: {
-    color: "#1F3A5F", // Optional hover color
-  },
   text: {
     margin: 0,
     fontSize: "14px",
+    textAlign: "right", // Align text to the right side
+    paddingLeft: "30px", // Padding on the left to balance with icons' padding
+    paddingRight: "70px", // Padding on the right for text
+    flex: 1, // Ensures the text takes up the available space between the icons
   },
 };
 
