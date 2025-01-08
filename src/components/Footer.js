@@ -74,7 +74,7 @@ const styles = {
     fontSize: "14px",
     textAlign: "right", // Align text to the right side
     paddingLeft: "30px", // Padding on the left to balance with icons' padding
-    paddingRight: "70px", // Padding on the right for text
+    paddingRight: "65px", // Padding on the right for text
     flex: 1, // Ensures the text takes up the available space between the icons
   },
 };

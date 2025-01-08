@@ -146,7 +146,9 @@ import React from "react";
 import { Container, Typography, Box, Grid, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { styled } from "@mui/system";
-import { FaProjectDiagram } from "react-icons/fa"; // Importing the React Icon for projects
+import { SiTableau } from "react-icons/si"; // Correctly import SiTableau
+import { FaSnowflake } from "react-icons/fa"; // FaSnowflake for Snowflake icon
+import { FaProjectDiagram } from "react-icons/fa"; // For project links
 import Particle from "./Particle"; // Assuming you have a Particle component
 
 // Styled Components for Customization
@@ -161,20 +163,15 @@ const ProjectHeading = styled(Typography)(({ theme }) => ({
   fontSize: "2.3rem",
   fontWeight: 500,
   paddingTop: theme.spacing(2),
+  paddingBottom: theme.spacing(3), // Added some bottom padding for spacing
   textAlign: "center",
-}));
-
-const ProjectDescription = styled(Typography)(({ theme }) => ({
-  color: "white",
-  textAlign: "center",
-  marginBottom: theme.spacing(4),
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 345,
   margin: "auto",
   backgroundColor: "transparent",
-  boxShadow: "0 4px 5px 3px rgba(145, 197, 249, 0.97)",
+  boxShadow: "0 4px 6px rgba(255, 255, 255, 0.3)", // Reduced and consistent shadow
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   height: '100%', // Ensures uniform height across cards
   display: 'flex',
@@ -204,20 +201,27 @@ function Projects() {
   const projectData = [
     {
       title: "Predictive-Analysis-of-Stock-Market-Data",
-      description:
-        "This repository contains an in-depth analysis of Tata Consultancy Services (TCS) stock market data over a period of 10 years, from 2013 to 2024. The objective of this analysis is to extract key performance metrics, understand stock price trends, and build predictive models for generating trading signals. This project utilizes various data analysis techniques and machine learning models to provide insights and potential trading strategies.",
+      description: [
+        "This repository contains an in-depth analysis of Tata Consultancy Services (TCS) stock market data over a period of 10 years, from 2013 to 2024.",
+        "The objective of this analysis is to extract key performance metrics, understand stock price trends, and build predictive models for generating trading signals.",
+        "This project utilizes various data analysis techniques and machine learning models to provide insights and potential trading strategies."
+      ],
       ghLink: "https://github.com/jainmohit2702/Predictive-Analysis-of-Stock-Market-Data",
     },
     {
       title: "Credit-Risk-Assessment-and-Predictive-Analysis-for-Mortgage-Lending-Optimization",
-      description:
-        "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation, achieving an 83% accuracy in detecting potential loan defaults.",
+      description: [
+        "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation.",
+        "Achieved an 83% accuracy in detecting potential loan defaults."
+      ],
       ghLink: "https://github.com/jainmohit2702/Credit-Risk-Assessment-and-Predictive-Analysis-for-Mortgage-Lending-Optimization-",
     },
     {
       title: "Tableau Projects",
-      description:
-        "CO2 Emissions: Explore emissions by country, region, and income. British Airways Reviews: Analyze customer feedback and satisfaction insights.",
+      description: [
+        "CO2 Emissions: Explore emissions by country, region, and income.",
+        "British Airways Reviews: Analyze customer feedback and satisfaction insights."
+      ],
       ghLink: "https://public.tableau.com/app/profile/mohit.jain3059/vizzes",
       tableauLink: "https://public.tableau.com/app/profile/mohit.jain3059/vizzes", // Added Tableau link
     },
@@ -226,12 +230,13 @@ function Projects() {
   return (
     <ProjectSection maxWidth="lg">
       <Particle />
-      <ProjectHeading variant="h3">
+      <ProjectHeading variant="h3"sx={{
+          color: "#cee8ff",
+          fontWeight: "bold",
+          mb: 2,
+        }}>
         My Recent Projects
       </ProjectHeading>
-      <ProjectDescription variant="subtitle1">
-        Here are a few projects I've worked on recently.
-      </ProjectDescription>
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {projectData.map((project, index) => (
           <Grid item key={index} xs={12} sm={6} md={4}>
@@ -250,9 +255,11 @@ function Projects() {
                   >
                     {project.title}
                   </Typography>
-                  <Typography variant="body2" color="white">
-                    {project.description}
-                  </Typography>
+                  <ul style={{ color: "white", paddingLeft: "20px" }}>
+                    {project.description.map((desc, idx) => (
+                      <li key={idx}>{desc}</li>
+                    ))}
+                  </ul>
                 </CardContent>
               </div>
               <CardActions sx={{ justifyContent: 'center' }}> {/* Center the icons */}
@@ -263,10 +270,9 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {/* Tableau Project Icon from React Icons */}
-                    <FaProjectDiagram
+                    <SiTableau
                       style={{
-                        fontSize: "30px",  // Adjust icon size as needed
+                        fontSize: "40px",  // Adjust icon size as needed
                         color: "white",  // White color for the icon
                       }}
                     />
@@ -300,23 +306,23 @@ function Projects() {
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {/* Skill Icons */}
-        {[
+        {[ 
           { name: "Python", color: "#3776AB", className: "fab fa-python" },
-          { name: "PostgreSQL", color: "#336791", className: "fas fa-database" },
+          { name: "MySQL", color: "#00758F", className: "fas fa-database" },
+          { name: "Tableau", color: "#E97627", component: <SiTableau style={{ fontSize: "40px", color: "white" }} /> },
           { name: "Power BI", color: "#F2C811", className: "fas fa-chart-bar" },
-          { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
-          { name: "Git", color: "#F05032", className: "fab fa-git" },
-          { name: "Confluence", color: "#172B4D", className: "fas fa-project-diagram" },
           { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
-          { name: "Azure", color: "#0078D4", className: "fab fa-microsoft" },
+          { name: "AWS", color: "#232F3E", className: "fab fa-aws" },
+          { name: "GCP", color: "#4285F4", className: "fab fa-google" },
+          { name: "Snowflake", color: "#1F4F96", className: "fas fa-snowflake" },
           { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
           { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },
+          { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
+          { name: "Git", color: "#F05032", className: "fab fa-git" },
         ].map((skill, index) => (
           <Grid item xs={6} sm={4} md={2} key={index}>
             {/* Icon with glowing border */}
-            <i
-              className={skill.className}
-              style={{
+            <Box sx={{
                 fontSize: "40px",
                 color: skill.color,
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -333,7 +339,9 @@ function Projects() {
                 e.target.style.transform = "scale(1)";
                 e.target.style.boxShadow = "0 0 15px rgba(206, 232, 255, 0.7)"; // Reset glow
               }}
-            ></i>
+            >
+              {skill.component || <i className={skill.className}></i>}
+            </Box>
             <Typography variant="subtitle1" sx={{ mt: 1, color: "#acc2ef" }}>
               {skill.name}
             </Typography>

@@ -399,7 +399,7 @@ import Particle from "./Particle"; // Assuming you have a Particle component
 // Styled Components for Customization
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: "transparent",
-  boxShadow: "0 4px 5px 3px rgba(255, 255, 255, 0.5)", // White glow border
+  boxShadow: "0 4px 6px rgba(255, 255, 255, 0.3)", // Consistent, reduced shadow
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   display: "flex",
   flexDirection: "column",
@@ -407,11 +407,11 @@ const StyledCard = styled(Card)(({ theme }) => ({
   position: "relative", // For absolute positioning of the icon at the bottom
   "&:hover": {
     transform: "scale(1.02)",
-    boxShadow: "0 4px 4px 5px rgba(255, 255, 255, 0.7)", // White glow on hover
+    boxShadow: "0 4px 4px 5px rgba(145, 197, 249, 0.97)",
   },
 }));
 
-const StyledIconButton = styled('a')(({ theme }) => ({
+const StyledIconButton = styled("a")(({ theme }) => ({
   color: "white",
   textDecoration: "none",
   position: "absolute",
@@ -429,7 +429,7 @@ const experiences = [
     company: "Techsolvo",
     position: "Business Intelligence Intern",
     duration: "Jun 2020–Apr 2021",
-    image: "/ssi.jpg", // Ensure this image exists in the public folder
+    image: "/tech.jpeg", // Ensure this image exists in the public folder
     responsibilities: [
       "I refined Python ETL scripts to integrate data into PostgreSQL, cutting load time by 1.5 hours. Using SQL and Tableau, I analyzed pricing trends to guide strategic decisions.",
       "Using SQL and Tableau, I analyzed pricing trends to guide strategic decisions.",
@@ -467,7 +467,7 @@ const experiences = [
     company: "Strategic Solutions International",
     position: "Business Intelligence Intern",
     duration: "Jun 2024–Aug 2024",
-    image: "/ssi.jpg", // Ensure this image exists in the public folder
+    image: "/SSG.png", // Ensure this image exists in the public folder
     responsibilities: [
       "I streamlined contract requirements using Excel, boosting profitability by $500K and improving risk management.",
       "My documentation efforts raised government contract wins by 25%, while capacity planning ensured more efficient budgeting and resource allocation."
@@ -503,7 +503,7 @@ export default function Experience() {
       }}
     >
       {/* Header Section */}
-      <Box sx={{ textAlign: "left", mb: 4 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
           variant="h4"
           sx={{
@@ -556,24 +556,22 @@ export default function Experience() {
                 </div>
                 <CardActions sx={{ justifyContent: "center" }}>
                   <Box sx={{ textAlign: "left", color: "white", marginBottom: "16px" }}>
-                    {/* Responsibilities */}
+                    {/* Summary */}
                     <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
-                      Responsibilities:
+                      Summary:
                     </Typography>
-                    <ul style={{ paddingLeft: "20px", color: "#cee8ff" }}>
-                      {exp.responsibilities.map((item, idx) => (
-                        <li key={idx}>{item}</li>
-                      ))}
-                    </ul>
+                    <Typography variant="body2" sx={{ color: "#cee8ff" }}>
+                      {exp.responsibilities.join(" ")} {/* Combined bullet points into a single paragraph */}
+                    </Typography>
 
-                    {/* Gap between Responsibilities and Technologies */}
+                    {/* Gap between Summary and Technologies */}
                     <Box sx={{ mt: 2 }} />
 
                     {/* Technologies */}
                     <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
                       Technologies:
                     </Typography>
-                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, backgroundColor: "#1F3A5F", padding: "8px", borderRadius: "8px" }}>
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, backgroundColor: "#1F3A5F", padding: "8px", borderRadius: "8px", border: "2px solid #cee8ff" }}>
                       {exp.technologies.map((tech, idx) => (
                         <Chip
                           key={idx}
@@ -585,7 +583,6 @@ export default function Experience() {
                               backgroundColor: "#3D5A80",
                             },
                             borderRadius: "12px", // Rounded corners for technologies
-                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", // White glow around technologies
                           }}
                           size="small"
                         />
