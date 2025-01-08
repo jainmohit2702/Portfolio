@@ -209,7 +209,7 @@ function Projects() {
       ghLink: "https://github.com/jainmohit2702/Predictive-Analysis-of-Stock-Market-Data",
     },
     {
-      title: "Credit Risk Assessment and Predictive Analysis for Mortgage Lending-Optimization",
+      title: "Credit Risk Assessment and Predictive Analysis for Mortgage Lending Optimization",
       description: [
         "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation.",
         "Achieved an 83% accuracy in detecting potential loan defaults."
