@@ -717,13 +717,23 @@ function About() {
           mt: "0px", // Top margin
           mb: "40px", // Bottom margin to ensure padding consistency
           p: 2,
-          pl: "100px", // Left padding
-          pr: "100px", // Right padding
+          pl: { xs: "20px", sm: "50px", md: "100px" }, // Left padding based on screen size
+          pr: { xs: "20px", sm: "50px", md: "100px" }, // Right padding based on screen size
           color: "white",
+          flexDirection: { xs: "column", sm: "row" }, // Stack vertically on small screens
         }}
       >
         {/* Left side: photo.png with Tilt effect */}
-        <Box sx={{ maxWidth: "350px",  mr: 20 , display: "flex", justifyContent: "center", alignItems: "center" }}>  {/* Added margin-right for the gap */}
+        <Box
+          sx={{
+            maxWidth: "350px",
+            mr: { xs: 0, sm: 9 }, // Margin right adjusts based on screen size
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mb: { xs: 4, sm: 0 }, // Add margin-bottom for smaller screens
+          }}
+        >
           <Tilt
             options={{
               max: 25, // Adjust the tilt intensity
@@ -746,25 +756,26 @@ function About() {
         </Box>
 
         {/* Right side: Text */}
-        <Box sx={{ mr: 4, flex: 1 }}>
-        <Typography
-  variant="h4"
-  sx={{
-    fontWeight: "bold",
-    color: "white",
-    textAlign: "center", // Align text to the center
-  }}
->
-  Hi there!
-  <span className="wave" role="img" aria-labelledby="wave">
-    👋🏻
-  </span>{" "}
-  <span style={{ color: "#cee8ff" }}>I'm Mohit Jain</span>
-</Typography>
+        <Box sx={{ mr: { sm: 4 }, flex: 1 }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              color: "white",
+              textAlign: "center", // Align text to the center
+              mb: 3, // Added margin-bottom to create the gap
+            }}
+          >
+            Hi there!
+            <span className="wave" role="img" aria-labelledby="wave">
+              👋🏻
+            </span>{" "}
+            <span style={{ color: "#cee8ff" }}>I'm Mohit Jain</span>
+          </Typography>
 
           <Box
-             sx={{
-              mr: 4,
+            sx={{
+              mr: { sm: 4 },
               flex: 1,
               maxWidth: "2400px", // Max width for the box
               p: 2, // Padding inside the box
@@ -780,11 +791,8 @@ function About() {
               },
             }}
           >
-            <Typography
-              variant="body1"
-              sx={{ fontSize: "1.15rem", lineHeight: 1.6 }}
-            >
-             As a Data Analyst with 3+ years of experience and
+            <Typography variant="body1" sx={{ fontSize: "1.15rem", lineHeight: 1.6 }}>
+              As a Data Analyst with 3+ years of experience and
               a Master's in Information Systems from the University of Maryland, I
               specialize in transforming complex data into actionable insights.
               <br />
