@@ -200,7 +200,7 @@ function Projects() {
   // Array of Project Data
   const projectData = [
     {
-      title: "Predictive-Analysis-of-Stock-Market-Data",
+      title: "Predictive Analysis of Stock Market Data",
       description: [
         "This repository contains an in-depth analysis of Tata Consultancy Services (TCS) stock market data over a period of 10 years, from 2013 to 2024.",
         "The objective of this analysis is to extract key performance metrics, understand stock price trends, and build predictive models for generating trading signals.",
@@ -209,7 +209,7 @@ function Projects() {
       ghLink: "https://github.com/jainmohit2702/Predictive-Analysis-of-Stock-Market-Data",
     },
     {
-      title: "Credit-Risk-Assessment-and-Predictive-Analysis-for-Mortgage-Lending-Optimization",
+      title: "Credit Risk Assessment and Predictive Analysis for Mortgage Lending-Optimization",
       description: [
         "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation.",
         "Achieved an 83% accuracy in detecting potential loan defaults."
