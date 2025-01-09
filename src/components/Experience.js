@@ -572,7 +572,7 @@ export default function Experience() {
                           label={tech}
                           sx={{
                             backgroundColor: "transparent",
-                            color: "#cee8ff",
+                            color: "#ffff",
                             // border: "2px solid #cee8ff", // Keep border for hover effect
                             "&:hover": {
                               backgroundColor: "#3D5A80",
