@@ -103,6 +103,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProfileArray from "./ProfileArray";
+
+
+import { FaUser } from "react-icons/fa"; // Changed to FaUser icon
 import { TbDownload } from "react-icons/tb";
 
 // Importing additional icons for navigation buttons
@@ -138,7 +141,7 @@ function Nav() {
       {/* Navigation Links */}
       <div className="links">
         <Link to="/" className="navLink">
-          <AiOutlineInfo className="navIcon" />
+        <FaUser className="navIcon" />
           About
         </Link>
         <Link to="/experience" className="navLink">

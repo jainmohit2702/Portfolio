@@ -13,7 +13,7 @@ const ProjectSection = styled(Container)(({ theme }) => ({
 
 const ProjectHeading = styled(Typography)(({ theme }) => ({
   color: "#cee8ff",
-  fontSize: "2.3rem",
+  fontSize: "2rem",
   fontWeight: "bold",
   paddingTop: theme.spacing(1),
   textAlign: "center",

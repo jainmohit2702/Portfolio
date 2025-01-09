@@ -464,8 +464,8 @@ const experiences = [
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
-    company: "Strategic Solutions International",
-    position: "Business Intelligence Intern",
+    company: "Strategic Solutions Int",
+    position: "Business Analyst Intern",
     duration: "Jun 2024–Aug 2024",
     image: "/SSG.png", // Ensure this image exists in the public folder
     responsibilities: [
@@ -496,7 +496,7 @@ export default function Experience() {
     <Container
       maxWidth="lg"
       sx={{
-        py: { xs: 4, md: 8 },
+        py: { xs: 2, md: 4 },
         pl: { xs: 2, sm: 4, md: 6 },
         pr: { xs: 2, sm: 4, md: 6 },
         boxSizing: "border-box",
@@ -509,7 +509,7 @@ export default function Experience() {
           sx={{
             color: "#cee8ff",
             fontWeight: "bold",
-            mb: 4,
+            mb: 2,
             fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" },
           }}
         >
@@ -523,7 +523,7 @@ export default function Experience() {
           <Grid item key={index} xs={12} sm={6} md={4}>
             <StyledCard
               sx={{
-                minHeight: index === experiences.length - 1 ? "600px" : "auto", // Make the last card taller if needed
+                minHeight: index === experiences.length - 1 ? "600px" : "auto",
               }}
             >
               <a href={exp.linkedin} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
@@ -531,22 +531,17 @@ export default function Experience() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={exp.image} // Image for the company
+                    image={exp.image}
                     alt={exp.company}
                     sx={{
                       backgroundSize: "contain",
-                      maxHeight: "150px", // Ensure image fits within the card
+                      maxHeight: "150px",
                       objectFit: "contain",
                       marginTop: "16px",
                     }}
                   />
                   <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="div"
-                      sx={{ color: "#cee8ff" }}
-                    >
+                    <Typography gutterBottom variant="h5" component="div" sx={{ color: "#cee8ff" }}>
                       {exp.company}
                     </Typography>
                     <Typography variant="body2" color="white">
@@ -560,48 +555,39 @@ export default function Experience() {
                     <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
                       Summary:
                     </Typography>
-                    <Typography variant="body2" sx={{ color: "#cee8ff" }}>
-                      {exp.responsibilities.join(" ")} {/* Combined bullet points into a single paragraph */}
+                    <Typography variant="body2" sx={{ color: "white" }}>
+                      {exp.responsibilities.join(" ")}
                     </Typography>
 
-                    {/* Gap between Summary and Technologies */}
                     <Box sx={{ mt: 2 }} />
 
                     {/* Technologies */}
                     <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
                       Technologies:
                     </Typography>
-                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, backgroundColor: "#1F3A5F", padding: "8px", borderRadius: "8px", border: "2px solid #cee8ff" }}>
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, padding: "8px" }}>
                       {exp.technologies.map((tech, idx) => (
                         <Chip
                           key={idx}
                           label={tech}
                           sx={{
-                            backgroundColor: "#1F3A5F",
-                            color: "#FFFFFF",
+                            backgroundColor: "transparent",
+                            color: "#cee8ff",
+                            // border: "2px solid #cee8ff", // Keep border for hover effect
                             "&:hover": {
                               backgroundColor: "#3D5A80",
                             },
-                            borderRadius: "12px", // Rounded corners for technologies
+                            borderRadius: "12px",
                           }}
                           size="small"
                         />
                       ))}
                     </Box>
                   </Box>
-                  {/* Last Card Special Icon */}
+
                   {index === experiences.length - 1 && (
-                    <StyledIconButton
-                      href={exp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaBriefcase
-                        style={{
-                          fontSize: "30px",
-                          color: "white",
-                        }}
-                      />
+                    <StyledIconButton href={exp.link} target="_blank" rel="noopener noreferrer">
+                      <FaBriefcase style={{ fontSize: "30px", color: "white" }} />
                     </StyledIconButton>
                   )}
                 </CardActions>

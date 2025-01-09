@@ -160,7 +160,7 @@ const ProjectSection = styled(Container)(({ theme }) => ({
 
 const ProjectHeading = styled(Typography)(({ theme }) => ({
   color: "white",
-  fontSize: "2.3rem",
+  fontSize: "2rem",
   fontWeight: 500,
   paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(3), // Added some bottom padding for spacing

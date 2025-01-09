@@ -827,7 +827,7 @@ function About() {
           justifyContent: "center",
           alignItems: "center",
           gap: 3,
-          mb: "10px",
+          mb: "0px", // Removed bottom margin here to reduce the gap
         }}
       >
         {/* "Let's Connect!" Text */}
