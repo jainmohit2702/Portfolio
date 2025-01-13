@@ -310,7 +310,7 @@ function Projects() {
           { name: "Python", color: "#3776AB", className: "fab fa-python" },
           { name: "MySQL", color: "#00758F", className: "fas fa-database" },
           { name: "Tableau", color: "#E97627", component: <SiTableau style={{ fontSize: "40px", color: "white" }} /> },
-          { name: "Power BI", color: "#F2C811", className: "fas fa-chart-bar" },
+          { name: "Power BI", color: "#F2C811", component: <img src="/bi.jpg" alt="Power BI" style={{ width: "40px", height: "40px" }} /> }, // Replacing Power BI icon with bi.webp image
           { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
           { name: "AWS", color: "#232F3E", className: "fab fa-aws" },
           { name: "GCP", color: "#4285F4", className: "fab fa-google" },
@@ -329,7 +329,7 @@ function Projects() {
                 padding: "30px", // Adds space between icon and border
                 borderRadius: "20px", // Rounded corners for the square
                 border: "0.3px solid  #cee8ff", // Glowing border color
-                boxShadow: "0 0 6px rgba(206, 232, 255, 0.7)", // Glowing effect
+                boxShadow: "0 0 3px rgba(206, 232, 255, 0.7)", // Glowing effect
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = "scale(1.1)";
@@ -337,7 +337,7 @@ function Projects() {
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = "scale(1)";
-                e.target.style.boxShadow = "0 0 15px rgba(206, 232, 255, 0.7)"; // Reset glow
+                e.target.style.boxShadow = "0 0 3px rgba(206, 232, 255, 0.7)"; // Reset glow
               }}
             >
               {skill.component || <i className={skill.className}></i>}

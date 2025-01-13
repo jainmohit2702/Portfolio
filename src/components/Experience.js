@@ -464,7 +464,7 @@ const experiences = [
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
-    company: "Strategic Solutions Int",
+    company: "Strategic Solutions Int.",
     position: "Business Analyst Intern",
     duration: "Jun 2024–Aug 2024",
     image: "/SSG.png", // Ensure this image exists in the public folder
@@ -479,7 +479,7 @@ const experiences = [
   {
     company: "University of Maryland",
     position: "Data Engineer Intern",
-    duration: "2024-2024",
+    duration: "Jun 2024- Aug 2024",
     image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
       "I built an ETL pipeline integrating GIS data and GCP, generating JSON outputs for dashboards.",
@@ -524,6 +524,7 @@ export default function Experience() {
             <StyledCard
               sx={{
                 minHeight: index === experiences.length - 1 ? "600px" : "auto",
+                textAlign: "left", // Apply right alignment to card content
               }}
             >
               <a href={exp.linkedin} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
@@ -538,59 +539,54 @@ export default function Experience() {
                       maxHeight: "150px",
                       objectFit: "contain",
                       marginTop: "16px",
+                      display: "block", // Ensures image does not take extra space
                     }}
                   />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" sx={{ color: "#cee8ff" }}>
-                      {exp.company}
-                    </Typography>
-                    <Typography variant="body2" color="white">
-                      {exp.position} &middot; {exp.duration}
-                    </Typography>
-                  </CardContent>
+                  <CardContent sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+  <Typography gutterBottom variant="h5" component="div" sx={{ color: "#cee8ff", textAlign: "center" }}>
+    {exp.company}
+  </Typography>
+  <Typography variant="body2" color="white" sx={{ textAlign: "center" }}>
+    {exp.position}
+  </Typography>
+  <Typography variant="body2" color="white" sx={{ textAlign: "center" }}>
+    {exp.duration}
+  </Typography>
+</CardContent>
+
                 </div>
-                <CardActions sx={{ justifyContent: "center" }}>
-                  <Box sx={{ textAlign: "left", color: "white", marginBottom: "16px" }}>
-                    {/* Summary */}
-                    <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
-                      Summary:
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: "white" }}>
-                      {exp.responsibilities.join(" ")}
-                    </Typography>
+                <CardActions sx={{ justifyContent: "flex-start" }}>
+  <Box sx={{ textAlign: "left", color: "white", marginBottom: "16px" }}>
+    {/* Summary */}
+    <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
+      Summary:
+    </Typography>
+    <Typography variant="body2" sx={{ color: "white" }}>
+      {exp.responsibilities.join(" ")}
+    </Typography>
 
-                    <Box sx={{ mt: 2 }} />
+    <Box sx={{ mt: 2 }} />
 
-                    {/* Technologies */}
-                    <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
-                      Technologies:
-                    </Typography>
-                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, padding: "8px" }}>
-                      {exp.technologies.map((tech, idx) => (
-                        <Chip
-                          key={idx}
-                          label={tech}
-                          sx={{
-                            backgroundColor: "transparent",
-                            color: "#ffff",
-                            // border: "2px solid #cee8ff", // Keep border for hover effect
-                            "&:hover": {
-                              backgroundColor: "#3D5A80",
-                            },
-                            borderRadius: "12px",
-                          }}
-                          size="small"
-                        />
-                      ))}
-                    </Box>
-                  </Box>
+    {/* Technologies - Normal Text with Commas */}
+    <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: "#cee8ff" }}>
+      Technologies:
+    </Typography>
+    <Typography variant="body2" sx={{ color: "white" }}>
+      {exp.technologies.map((tech, idx) => (
+        <span key={idx} style={{ cursor: "pointer", transition: "color 0.3s ease", "&:hover": { color: "#6c63ff" } }}>
+          {tech}{idx < exp.technologies.length - 1 ? ", " : ""}
+        </span>
+      ))}
+    </Typography>
+  </Box>
 
-                  {index === experiences.length - 1 && (
-                    <StyledIconButton href={exp.link} target="_blank" rel="noopener noreferrer">
-                      <FaBriefcase style={{ fontSize: "30px", color: "white" }} />
-                    </StyledIconButton>
-                  )}
-                </CardActions>
+  {index === experiences.length - 1 && (
+    <StyledIconButton href={exp.link} target="_blank" rel="noopener noreferrer">
+      <FaBriefcase style={{ fontSize: "30px", color: "white" }} />
+    </StyledIconButton>
+  )}
+</CardActions>
+
               </a>
             </StyledCard>
           </Grid>
