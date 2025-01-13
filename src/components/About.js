@@ -924,7 +924,7 @@ function About() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          mt: "70px", // Top margin increased to move content down
+          mt: "100px", // Top margin increased to move content down
           mb: "40px", // Bottom margin to ensure padding consistency
           p: 2,
           pl: { xs: "20px", sm: "50px", md: "100px" }, // Left padding based on screen size
@@ -966,7 +966,7 @@ function About() {
         </Box>
 
         {/* Right side: Text */}
-        <Box sx={{ mr: { sm: 4 }, flex: 1 }}>
+        <Box sx={{ mr: { sm: 6 }, flex: 1 }}>
           <Typography
             variant="h4"
             sx={{
