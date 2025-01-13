@@ -428,38 +428,38 @@ const experiences = [
   {
     company: "Techsolvo",
     position: "Business Intelligence Intern",
-    duration: "Jun 2020-Apr 2021",
+    duration: "Jun 2020 - Apr 2021",
     image: "/tech.jpeg", // Ensure this image exists in the public folder
     responsibilities: [
 "I refined Python ETL scripts to integrate data into PostgreSQL, cutting load time by 1.5 hours."      ,
 "Using SQL and Tableau, I analyzed pricing trends."      ,
-"I created a Random Forest model with 85% accuracy, improving financial forecasting and planning."    ],
-    technologies: ["Python", "PostgreSQL", "Tableau", "ETL"],
+"I created a Random Forest model with 85% accuracy, improving financial forecasting and planning."],
+    technologies: ["Python", "ETL", "Tableau", "PostgreSQL","Scikit-learn","Machine Learning"],
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
     company: "Tata Consultancy Services",
     position: "Data Analyst",
-    duration: "May 2021-Jul 2023",
+    duration: "May 2021 - Jul 2023",
     image: "/tcs.svg", // Ensure this image exists in the public folder
     responsibilities: [
       "I built Power BI dashboards to simplify reporting.",
       "I coordinated Agile sprints via Jira, overseeing a team that integrated an AI-driven moderation system with AWS, boosting efficiency by 40% and reducing costs through optimized SQL queries and MongoDB upgrades."
     ],
-    technologies: ["MongoDB", "Agile", "PowerBI", "Jira", "Git", "Service Now"],
+    technologies: [ "PowerBI", "AWS", "MongoDB", "JavaScript", "NodeJS", "JIRA", "Sumo Logic", "ServiceNow"],
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
     company: "University of Maryland",
     position: "Data Analyst-GA",
-    duration: "Aug 2023-May 2024",
+    duration: "Aug 2023 - May 2024",
     image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
       "I used Excel (VLOOKUP, Pivot Tables) to transform data for process improvements.",
       "Tableau dashboards provided real-time insights, increasing reporting efficiency by 20%.",
       "Additionally, SQL and Python analyses identified process bottlenecks, improving operations."
     ],
-    technologies: ["Python", "Excel", "Power BI", "MySQL", "Tableau", "Data Analytics", "Data Visualization"],
+    technologies: ["Tableau", "Python", "Excel", "MySQL"],
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
@@ -471,14 +471,14 @@ const experiences = [
       "I streamlined contract requirements using Excel, boosting profitability by $500K and improving risk management.",
       "My documentation efforts raised government contract wins by 25%, while capacity planning ensured more efficient budgeting and resource allocation."
     ],
-    technologies: ["Financial Analysis", "Capacity Planning", "Process Improvement", "Risk Analysis"],
+    technologies: ["Excel", "Confluence"," Capacity Planning", "Cost-benefit Analysis"],
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   // New fifth card
   {
     company: "University of Maryland",
     position: "Data Engineer Intern",
-    duration: "Jun 2024- Aug 2024",
+    duration: "Jun 2024 - Aug 2024",
     image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
       "I built an ETL pipeline integrating GIS data and GCP, generating JSON outputs for dashboards.",

@@ -310,11 +310,11 @@ function Projects() {
           { name: "Python", color: "#3776AB", className: "fab fa-python" },
           { name: "MySQL", color: "#00758F", className: "fas fa-database" },
           { name: "Tableau", color: "#E97627", component: <SiTableau style={{ fontSize: "40px", color: "white" }} /> },
-          { name: "Power BI", color: "#F2C811", component: <img src="/bi.jpg" alt="Power BI" style={{ width: "40px", height: "40px" }} /> }, // Replacing Power BI icon with bi.webp image
+          { name: "Power BI", color: "#F2C811", component: <img src="/bi.png" alt="Power BI" style={{ width: "40px", height: "40px" }} /> }, // Replacing Power BI icon with bi.webp image
           { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
-          { name: "AWS", color: "#232F3E", className: "fab fa-aws" },
+          { name: "AWS", color: "#232F3E", component: <img src="/aws1.png" alt="AWS" style={{ width: "40px", height: "40px", filter: "invert(1)" }} /> },
           { name: "GCP", color: "#4285F4", className: "fab fa-google" },
-          { name: "Snowflake", color: "#1F4F96", className: "fas fa-snowflake" },
+          { name: "Snowflake", color: "#1F4F96", component: <img src="/SNOW.png" alt="Snowflake" style={{ width: "40px", height: "40px" }} /> },
           { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
           { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },
           { name: "JIRA", color: "#0052CC", className: "fab fa-jira" },
