@@ -160,7 +160,7 @@ function Nav() {
 
       {/* Download Resume Button */}
       <div className="downloadButtonContainer">
-        <a href="/Resume.pdf" download className="downloadButton" aria-label="Download Resume">
+        <a href="/Resume_Mohit_Jain.pdf" download className="downloadButton" aria-label="Download Resume">
           <TbDownload className="downloadIcon" />
           Download Resume
         </a>
