@@ -428,20 +428,19 @@ const experiences = [
   {
     company: "Techsolvo",
     position: "Business Intelligence Intern",
-    duration: "Jun 2020–Apr 2021",
+    duration: "Jun 2020-Apr 2021",
     image: "/tech.jpeg", // Ensure this image exists in the public folder
     responsibilities: [
-      "I refined Python ETL scripts to integrate data into PostgreSQL, cutting load time by 1.5 hours. Using SQL and Tableau, I analyzed pricing trends to guide strategic decisions.",
-      "Using SQL and Tableau, I analyzed pricing trends to guide strategic decisions.",
-      "I also created a Random Forest model with 85% accuracy, improving financial forecasting and planning."
-    ],
+"I refined Python ETL scripts to integrate data into PostgreSQL, cutting load time by 1.5 hours."      ,
+"Using SQL and Tableau, I analyzed pricing trends."      ,
+"I created a Random Forest model with 85% accuracy, improving financial forecasting and planning."    ],
     technologies: ["Python", "PostgreSQL", "Tableau", "ETL"],
     linkedin: "https://www.linkedin.com/in/mohit-2702-jain/",
   },
   {
     company: "Tata Consultancy Services",
     position: "Data Analyst",
-    duration: "May 2021 − Jul 2023",
+    duration: "May 2021-Jul 2023",
     image: "/tcs.svg", // Ensure this image exists in the public folder
     responsibilities: [
       "I built Power BI dashboards to simplify reporting.",
@@ -452,8 +451,8 @@ const experiences = [
   },
   {
     company: "University of Maryland",
-    position: "Data Analyst - GA",
-    duration: "Aug 2023 - May 2024",
+    position: "Data Analyst-GA",
+    duration: "Aug 2023-May 2024",
     image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
       "I used Excel (VLOOKUP, Pivot Tables) to transform data for process improvements.",
@@ -466,7 +465,7 @@ const experiences = [
   {
     company: "Strategic Solutions Int.",
     position: "Business Analyst Intern",
-    duration: "Jun 2024–Aug 2024",
+    duration: "Jun 2024 - Aug 2024",
     image: "/SSG.png", // Ensure this image exists in the public folder
     responsibilities: [
       "I streamlined contract requirements using Excel, boosting profitability by $500K and improving risk management.",
