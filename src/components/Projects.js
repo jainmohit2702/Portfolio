@@ -209,7 +209,7 @@ function Projects() {
       ghLink: "https://github.com/jainmohit2702/Predictive-Analysis-of-Stock-Market-Data",
     },
     {
-      title: "Credit Risk Assessment and Predictive Analysis for Mortgage Lending Optimization",
+      title: "Mortgage Lending: Credit Risk & Predictive Analysis",
       description: [
         "Implemented predictive analysis techniques to enhance credit risk assessment, optimize mortgage lending strategies, and improve risk mitigation.",
         "Achieved an 83% accuracy in detecting potential loan defaults."
@@ -219,8 +219,8 @@ function Projects() {
     {
       title: "Tableau Projects",
       description: [
-        "CO2 Emissions: Explore emissions by country, region, and income.",
-        "British Airways Reviews: Analyze customer feedback and satisfaction insights."
+        "21st Century Global CO2 Emissions: Interactive map showcasing CO2 emissions (2000–2020) filtered by income groups, highlighting trends, outliers, and the impact of top and lowest emitters.",
+        "British Airways Reviews: Comprehensive insights into passenger feedback (2016–2023), highlighting service aspects, monthly performance trends, and a global satisfaction map with interactive filters for deeper analysis."
       ],
       ghLink: "https://public.tableau.com/app/profile/mohit.jain3059/vizzes",
       tableauLink: "https://public.tableau.com/app/profile/mohit.jain3059/vizzes", // Added Tableau link
@@ -312,8 +312,8 @@ function Projects() {
           { name: "Tableau", color: "#E97627", component: <SiTableau style={{ fontSize: "40px", color: "white" }} /> },
           { name: "Power BI", color: "#F2C811", component: <img src="/bi.png" alt="Power BI" style={{ width: "40px", height: "40px" }} /> }, // Replacing Power BI icon with bi.webp image
           { name: "Excel", color: "#217346", className: "fas fa-file-excel" },
-          { name: "AWS", color: "#232F3E", component: <img src="/aws1.png" alt="AWS" style={{ width: "40px", height: "40px", filter: "invert(1)" }} /> },
-          { name: "GCP", color: "#4285F4", className: "fab fa-google" },
+          { name: "AWS", color: "#232F3E", component: <img src="/aws1.png" alt="AWS" style={{ width: "60px", height: "40px", filter: "invert(1)" }} /> },
+          { name: "GCP", color: "#4285F4",  component: <img src="/GCP Icon.png" alt="GCP" style={{ width: "40px", height: "40px" }} />  },
           { name: "Snowflake", color: "#1F4F96", component: <img src="/SNOW.png" alt="Snowflake" style={{ width: "40px", height: "40px" }} /> },
           { name: "MongoDB", color: "#47A248", className: "fas fa-leaf" },
           { name: "JavaScript", color: "#F7DF1E", className: "fab fa-js-square" },

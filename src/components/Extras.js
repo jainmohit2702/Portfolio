@@ -56,9 +56,9 @@ function Extras() {
   // Array of Project Data with unique images for each project
   const projectData = [
     {
-      title: "AWS Cloud Practitioner",
+      title: "AWS Certified Cloud Practitioner",
       ghLink: "https://cp.certmetrics.com/amazon/en/public/verify/credential/8e1c281c115841e4934834491c670dcb",
-      image: "/aws.png", // Unique image for AWS
+      image: "/AWS_Certification.png", // Unique image for AWS
     },
     {
       title: "Tableau Desktop Specialist",

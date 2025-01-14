@@ -451,7 +451,7 @@ const experiences = [
   },
   {
     company: "University of Maryland",
-    position: "Data Analyst-GA",
+    position: "Data Analyst - Graduate Assistant",
     duration: "Aug 2023 - May 2024",
     image: "/UMD.webp", // Ensure this image exists in the public folder
     responsibilities: [
