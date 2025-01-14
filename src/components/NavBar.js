@@ -157,6 +157,7 @@ function Nav() {
           Certifications
         </Link>
       </div>
+      
 
       {/* Download Resume Button */}
       <div className="downloadButtonContainer">
